@@ -1,0 +1,145 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <input type="text" name="" value="1" id="regExField">
+      <input type="text" name="" value="2" id="flagField">
+      <input type="text" name="" value="3" id="strField">
+      <textarea name="name" rows="8" cols="80" id="resultArea"></textarea>
+  </body>
+
+  <script type="text/javascript">
+
+      var regExField = document.querySelector("#regExField");
+      var flagField = document.querySelector("#flagField");
+      var strField = document.querySelector("#strField");
+      var resultArea = document.querySelector("#resultArea");
+
+      var regEx;
+      var inputString = '';
+
+      function regExConvert(){
+        var regExString = regExField.value
+        regEx = new RegExp(,'ig');
+        inputString = strField.value;
+        if(regEx.test(inputString)){
+          resultArea.value = '';
+          var regExec = regEx.exec(inputString);
+          resultArea.value = regExec.input;
+        }
+        else{
+          resultArea.value = false;
+        }
+      }
+
+      regExField.addEventListener("keyup",function(){
+        regEx = new RegExp(regExField.value,'ig');
+      });
+
+      strField.addEventListener("keyup",function(){
+        regEx = new RegExp(regExField.value,'ig');
+        inputString = strField.value;
+        if(regEx.test(strField.value)){
+          resultArea.value = '';
+          var regExec = regEx.exec(strField.value);
+          resultArea.value = regExec.input;
+        }
+        else{
+          resultArea.value = false;
+        }
+      });
+
+  </script>
+</html>
+
+<!-- var regexp = /(\d\d\d)-(\d\d\d\d)/;
+var str = 'call me: 555-4385';
+var result = regexp.exec(str);
+if (result) {
+  alert(result[0]);
+  alert(result[1]);
+  alert(result[2]);
+} -->
+
+<!-- https://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+RegExp.escape= function(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}; -->
+=======
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <input type="text" name="" value="1" id="regExField">
+      <input type="text" name="" value="2" id="flagField">
+      <input type="text" name="" value="3" id="strField">
+      <textarea name="name" rows="8" cols="80" id="resultArea"></textarea>
+  </body>
+
+  <script type="text/javascript">
+
+      var regExField = document.querySelector("#regExField");
+      var flagField = document.querySelector("#flagField");
+      var strField = document.querySelector("#strField");
+      var resultArea = document.querySelector("#resultArea");
+
+      var regEx;
+      var inputString = '';
+
+      function regExConvert(){
+        var regExString = regExField.value
+        regEx = new RegExp(,'ig');
+        inputString = strField.value;
+        if(regEx.test(inputString)){
+          resultArea.value = '';
+          var regExec = regEx.exec(inputString);
+          resultArea.value = regExec.input;
+        }
+        else{
+          resultArea.value = false;
+        }
+      }
+
+      regExField.addEventListener("keyup",function(){
+        regEx = new RegExp(regExField.value,'ig');
+      });
+
+      strField.addEventListener("keyup",function(){
+        regEx = new RegExp(regExField.value,'ig');
+        inputString = strField.value;
+        if(regEx.test(strField.value)){
+          resultArea.value = '';
+          var regExec = regEx.exec(strField.value);
+          resultArea.value = regExec.input;
+        }
+        else{
+          resultArea.value = false;
+        }
+      });
+
+  </script>
+</html>
+
+<!-- var regexp = /(\d\d\d)-(\d\d\d\d)/;
+var str = 'call me: 555-4385';
+var result = regexp.exec(str);
+if (result) {
+  alert(result[0]);
+  alert(result[1]);
+  alert(result[2]);
+} -->
+
+<!-- https://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
+https://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+RegExp.escape= function(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}; -->
+>>>>>>> 141772e27d15656a43164b1ddcdc4b44cedec24a
